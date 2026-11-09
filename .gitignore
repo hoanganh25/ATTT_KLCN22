@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Datasets and generated data
+Data/
+prepared/
+*.npy
+*.npz
+*.flac
+*.wav
+
+# Training results and checkpoints
+runs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Generated outputs
+reports/
+chart/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
