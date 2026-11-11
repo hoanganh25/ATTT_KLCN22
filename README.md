@@ -8,15 +8,21 @@ Quy trình thực nghiệm gồm: chuẩn bị dữ liệu → huấn luyện b�
 
 | Đường dẫn | Nội dung |
 |---|---|
-| `prepare_dataset.py` | Tạo cache log-Mel và patch train/val/test |
-| `train_CNN_baseline.py` | Huấn luyện CNN Baseline |
-| `train_se_resnet.py` | Huấn luyện SE-ResNet |
-| `estimate_energy_mask_threshold.py` | Ước lượng ngưỡng energy-mask từ TRAIN, kiểm tra tỷ lệ dương trên DEV |
-| `evaluate.py` | Đánh giá checkpoint trên TEST |
-| `chart/bieu_do_chuong_4.py` | Logic dùng chung để vẽ các biểu đồ Chương 4 |
+| `Data/` | Quản lý dữ liệu đầu vào và các tập dữ liệu đã chuẩn bị cho mô hình |
+| `prepared/` | Cache log-Mel, manifest và thống kê chuẩn hóa được tạo từ âm thanh |
+| `channels/` | Mô phỏng các kênh truyền AWGN, Rayleigh và kênh không nhiễu |
+| `mel_frontend/` | Tiền xử lý âm thanh và chuyển đổi sang đặc trưng log-Mel |
+| `mel_inverse/` | Khôi phục dạng sóng từ đặc trưng Mel bằng Power-Mel Joint |
+| `model/CNN_Baseline/` | Encoder và Decoder của mô hình CNN Baseline |
+| `model/SE-ResNet/` | Encoder và Decoder của mô hình SE-ResNet |
+| `training/` | Các thành phần dùng chung trong quá trình huấn luyện và lấy mẫu SNR |
+| `evaluation/` | Tính toán chỉ số và tổng hợp kết quả đánh giá |
+| `runs/` | Cấu hình, lịch sử huấn luyện và checkpoint của các mô hình |
+| `reports/` | Kết quả đánh giá, thống kê dữ liệu và ngưỡng energy-mask |
+| `chart/` | Các công cụ vẽ biểu đồ Chương 4 và biểu đồ loss huấn luyện |
 | `chart/ve_bieu_do_4.5_va_4.6/` | Biểu đồ loss TRAIN/DEV và DEV MSE theo SNR |
-| `chart/ve_bieu_do_4.7/`–`chart/ve_bieu_do_4.14/` | Biểu đồ kết quả đánh giá |
-| `chart/chart_train_dev_loss/chart_loss_train_dev.py` | Biểu đồ loss độc lập; không thuộc bộ biểu đồ Chương 4 dùng chung |
+| `chart/ve_bieu_do_4.7/`–`chart/ve_bieu_do_4.14/` | Các biểu đồ kết quả đánh giá trên TEST |
+| `chart/chart_train_dev_loss/` | Biểu đồ loss TRAIN/DEV độc lập, không thuộc bộ biểu đồ Chương 4 dùng chung |
 
 Dataset, cache, checkpoint và kết quả báo cáo không được đóng gói trong repo. Các thư mục tương ứng bị `.gitignore` bỏ qua; cần chuẩn bị hoặc sinh chúng trên máy chạy.
 
