@@ -12,7 +12,7 @@ env/
 .env.*
 
 # Datasets and generated data
-Data/
+Data/splits/
 prepared/
 *.npy
 *.npz
