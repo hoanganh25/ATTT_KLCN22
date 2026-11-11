@@ -28,7 +28,11 @@ runs/
 
 # Generated outputs
 reports/
-chart/
+# Keep chart source code in Git; ignore generated chart exports.
+chart/**/*.png
+chart/**/*.pdf
+chart/**/*.csv
+chart/**/*.json
 
 # Editors and OS
 .vscode/
